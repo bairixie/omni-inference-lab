@@ -1,0 +1,21 @@
+flowchart LR
+  subgraph Inputs
+    Text
+    Images
+    Audio
+    Video[Video: timed frames and audio]
+  end
+  Text --> Tok[Tokenizer and embeddings]
+  Images --> Vision[SigLip2 vision encoder and resampler]
+  Audio --> Encoder[Whisper-medium encoder and projection]
+  Video -.-> Vision
+  Video -.-> Encoder
+  Tok --> Thinker[Thinker: Qwen3-8B prefill and decode]
+  Vision --> Thinker
+  Encoder --> Thinker
+  Thinker --> Words[Text detokenization]
+  Thinker -. speech conditioning .-> Talker[Talker: codec tokens]
+  Talker -.-> Flow[Flow: acoustic features]
+  Reference[Optional reference voice] -.-> Flow
+  Flow -.-> HiFT[HiFT: waveform]
+  Note[Conceptual model diagram. Dashed routes are task-dependent.]

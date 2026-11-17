@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="940" viewBox="0 0 1600 940">
+<rect width="1600" height="940" fill="white"/>
+<text x="40" y="59" font-family="DejaVu Sans, sans-serif" font-size="34" font-weight="bold" fill="#182b43">SGLang Omni: example process and device placement</text>
+<text x="40" y="101" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="normal" fill="#182b43">One shared GPU; logical stages are grouped into OS processes</text>
+<rect x="30" y="130" width="1530" height="120" rx="12" fill="#f3f6fa" stroke="#a5b6cb" stroke-width="2"/>
+<text x="46" y="166" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="bold" fill="#182b43">Coordinator process | CPU</text>
+<rect x="60" y="180" width="360" height="55" rx="9" fill="#e5f0fd" stroke="#45658b" stroke-width="2"/>
+<text x="75" y="212.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="bold" fill="#182b43">HTTP admission / routing</text>
+<rect x="1120" y="180" width="410" height="55" rx="9" fill="#e5f0fd" stroke="#45658b" stroke-width="2"/>
+<text x="1135" y="212.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="bold" fill="#182b43">Response serialization</text>
+<rect x="30" y="300" width="1040" height="425" rx="12" fill="#f3f6fa" stroke="#a5b6cb" stroke-width="2"/>
+<text x="46" y="336" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="bold" fill="#182b43">Pipeline process | CPU threads + GPU 0</text>
+<rect x="60" y="385" width="280" height="100" rx="9" fill="#e5f0fd" stroke="#45658b" stroke-width="2"/>
+<text x="75" y="425.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="bold" fill="#182b43">Preprocessing</text>
+<text x="75" y="454.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="normal" fill="#182b43">Media + prompt | CPU</text>
+<rect x="400" y="385" width="290" height="100" rx="9" fill="#e5f0fd" stroke="#45658b" stroke-width="2"/>
+<text x="415" y="410.5" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="bold" fill="#182b43">Audio encoder</text>
+<text x="415" y="438.5" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="normal" fill="#182b43">Features to embeddings</text>
+<text x="415" y="468.5" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="normal" fill="#182b43">GPU 0</text>
+<rect x="750" y="385" width="290" height="125" rx="9" fill="#e5f0fd" stroke="#45658b" stroke-width="2"/>
+<text x="765" y="423.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="bold" fill="#182b43">Thinker</text>
+<text x="765" y="452.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="normal" fill="#182b43">Prefill / decode</text>
+<text x="765" y="481.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="normal" fill="#182b43">GPU 0</text>
+<rect x="400" y="565" width="290" height="100" rx="9" fill="#f5ecdb" stroke="#45658b" stroke-width="2"/>
+<text x="415" y="605.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="bold" fill="#182b43">Image encoder</text>
+<text x="415" y="634.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="normal" fill="#182b43">Optional vision | GPU 0</text>
+<rect x="750" y="585" width="290" height="80" rx="9" fill="#e5f0fd" stroke="#45658b" stroke-width="2"/>
+<text x="765" y="615.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="bold" fill="#182b43">Text detokenization</text>
+<text x="765" y="644.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="normal" fill="#182b43">CPU</text>
+<rect x="1110" y="300" width="450" height="425" rx="12" fill="#f3f6fa" stroke="#a5b6cb" stroke-width="2"/>
+<text x="1126" y="336" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="bold" fill="#182b43">Speech process | same GPU 0</text>
+<rect x="1140" y="385" width="390" height="90" rx="9" fill="#f5ecdb" stroke="#45658b" stroke-width="2"/>
+<text x="1155" y="420.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="bold" fill="#182b43">Talker</text>
+<text x="1155" y="449.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="normal" fill="#182b43">Codec generation | GPU 0</text>
+<rect x="1140" y="560" width="390" height="105" rx="9" fill="#f5ecdb" stroke="#45658b" stroke-width="2"/>
+<text x="1155" y="602.5" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="bold" fill="#182b43">Code2Wav</text>
+<text x="1155" y="631.5" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="normal" fill="#182b43">Flow + HiFT | GPU 0</text>
+<polyline points="200,235 200,275 15,275 15,435 60,435" fill="none" stroke="#436080" stroke-width="3"/><polygon points="60,435 49.19463477176788,440.21958640933474 49.19463477176788,429.78041359066526" fill="#436080"/>
+<polyline points="340,435 400,435" fill="none" stroke="#436080" stroke-width="3"/><polygon points="400,435 389.1946347717679,440.21958640933474 389.1946347717679,429.78041359066526" fill="#436080"/>
+<polyline points="690,435 750,435" fill="none" stroke="#436080" stroke-width="3"/><polygon points="750,435 739.1946347717678,440.21958640933474 739.1946347717678,429.78041359066526" fill="#436080"/>
+<polyline points="895,510 895,585" fill="none" stroke="#436080" stroke-width="3"/><polygon points="895,585 889.7804135906653,574.1946347717678 900.2195864093347,574.1946347717678" fill="#436080"/>
+<polyline points="1040,625 1090,625 1090,205 1120,205" fill="none" stroke="#436080" stroke-width="3"/><polygon points="1120,205 1109.1946347717678,210.21958640933477 1109.1946347717678,199.78041359066523" fill="#436080"/>
+<polyline points="200,485 200,615 400,615" fill="none" stroke="#436080" stroke-width="3" stroke-dasharray="10 7"/><polygon points="400,615 389.1946347717679,620.2195864093347 389.1946347717679,609.7804135906653" fill="#436080"/>
+<polyline points="690,615 720,615 720,470 750,470" fill="none" stroke="#436080" stroke-width="3" stroke-dasharray="10 7"/><polygon points="750,470 739.1946347717678,475.21958640933474 739.1946347717678,464.78041359066526" fill="#436080"/>
+<polyline points="1040,430 1140,430" fill="none" stroke="#436080" stroke-width="3" stroke-dasharray="10 7"/><polygon points="1140,430 1129.1946347717678,435.21958640933474 1129.1946347717678,424.78041359066526" fill="#436080"/>
+<polyline points="1335,475 1335,560" fill="none" stroke="#436080" stroke-width="3" stroke-dasharray="10 7"/><polygon points="1335,560 1329.7804135906651,549.1946347717678 1340.2195864093349,549.1946347717678" fill="#436080"/>
+<polyline points="1530,610 1580,610 1580,205 1530,205" fill="none" stroke="#436080" stroke-width="3" stroke-dasharray="10 7"/><polygon points="1530,205 1540.8053652282322,199.78041359066523 1540.8053652282322,210.21958640933477" fill="#436080"/>
+<text x="40" y="798" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="normal" fill="#182b43">Solid: audio transcription to text. Dashed: task-dependent image and speech branches.</text>
+<text x="40" y="842" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="normal" fill="#182b43">A batch groups model work; it is not the same as client concurrency or a separate process.</text>
+<text x="40" y="887" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="normal" fill="#182b43">This configuration diagram reports no durations, GPU utilization, or bottleneck conclusions.</text>
+</svg>

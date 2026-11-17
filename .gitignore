@@ -1,0 +1,26 @@
+# Runtime assets remain outside this repository.
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+sglang-env/
+cache/
+downloads/
+models/
+model/
+toolchains/
+external/
+runtime-output/
+*.safetensors
+*.ckpt
+*.pt
+*.bin
+*.wav
+*.flac
+*.mp3
+*.mp4
+*.log
+*.trace.json
+*.trace.json.gz
+.env
+.env.*

@@ -1,0 +1,174 @@
+--- a/sglang_omni/models/minicpm_o/components/preprocessor.py
++++ b/sglang_omni/models/minicpm_o/components/preprocessor.py
+@@ -4,6 +4,7 @@
+ from __future__ import annotations
+ 
+ import re
++import p1_observe
+ import threading
+ from collections.abc import Mapping
+ 
+@@ -488,6 +489,7 @@
+             **processor_video_options,
+         )
+ 
++        p1_observe.preprocess(payload.request_id, audios, processed, self.tokenizer)
+         input_ids = processed["input_ids"][0].to(dtype=torch.long)
+         attention_mask = torch.ones_like(input_ids)
+ 
+--- a/sglang_omni/models/minicpm_o/merge.py
++++ b/sglang_omni/models/minicpm_o/merge.py
+@@ -2,6 +2,8 @@
+ """Join encoder branches for the thinker, and build the decode-stage result."""
+ 
+ from __future__ import annotations
++
++import p1_observe
+ 
+ from sglang_omni.models.minicpm_o.payload_types import (
+     MiniCPMOPipelineState,
+@@ -120,4 +122,5 @@
+             "total_tokens": prompt_tokens + completion_tokens,
+         },
+     )
++    p1_observe.finish(payload.request_id, result)
+     return result
+--- a/sglang_omni/models/minicpm_o/stages.py
++++ b/sglang_omni/models/minicpm_o/stages.py
+@@ -4,6 +4,7 @@
+ from __future__ import annotations
+ 
+ import logging
++import p1_observe
+ import os
+ from collections.abc import Mapping
+ from contextlib import nullcontext
+@@ -79,6 +80,7 @@
+     )
+ 
+     async def preprocess_with_events(payload: StagePayload) -> StagePayload:
++        p1_observe.begin(payload.request_id)
+         emit_event(
+             request_id=payload.request_id,
+             stage="preprocessing",
+@@ -86,6 +88,9 @@
+         )
+         try:
+             return await preprocessor(payload)
++        except Exception as exc:
++            p1_observe.failed(payload.request_id, "preprocessing", exc)
++            raise
+         finally:
+             emit_event(
+                 request_id=payload.request_id,
+@@ -122,6 +127,7 @@
+     )
+ 
+     def _encode_stage(payload: StagePayload) -> StagePayload:
++        p1_observe.encoder_begin(payload.request_id, stage_name)
+         state = MiniCPMOPipelineState.from_dict(payload.data)
+         request = build_encoder_request(state, stage_name=stage_name)
+         cached = (
+@@ -145,6 +151,7 @@
+                     encoder_stream.synchronize()
+                 else:
+                     pass
++        p1_observe.encoder_end(payload.request_id, stage_name, encoder_out, cache, cached is not None)
+         state.encoder_outs[stage_name] = encoder_out
+         payload.data = state.to_dict()
+         return payload
+--- a/sglang_omni/profiler/event_recorder.py
++++ b/sglang_omni/profiler/event_recorder.py
+@@ -214,6 +214,9 @@
+     timestamp_ns: int | None = None,
+ ) -> None:
+     """Module-level shortcut for the process recorder."""
++    import p1_observe
++
++    p1_observe.native_event(request_id, stage, event_name, timestamp_ns)
+     RECORDER.emit(
+         request_id=request_id,
+         stage=stage,
+--- a/sglang_omni/scheduling/omni_scheduler.py
++++ b/sglang_omni/scheduling/omni_scheduler.py
+@@ -15,6 +15,7 @@
+ 
+ import contextlib
+ import logging
++import p1_observe
+ import queue as _queue_mod
+ import threading
+ import time
+@@ -2261,6 +2262,7 @@
+         self.drain_request_admission_results()
+ 
+     def run_batch(self, batch, pp_proxy_tensors=None):
++        p1_observe.batch(self, batch, "launch")
+         try:
+             return self._run_batch(batch, pp_proxy_tensors)
+         except Exception as exc:
+@@ -2277,7 +2279,9 @@
+             self.emit_prefill_end_for_batch(batch)
+         else:
+             pass
++        p1_observe.batch(self, batch, "result_before_cleanup")
+         _Upstream.process_batch_result(self, batch, result)
++        p1_observe.batch_result_done(self, batch)
+         # note (Richard Wang): cache prompt before blocking tail inserts
+         for req in batch.reqs:
+             if req.output_ids and getattr(
+@@ -2554,6 +2558,7 @@
+         (forward + sample, then ``post_decode_launch`` publishes the resolve
+         payload), without waiting. Returns ``(sched_output, pending_step)``; the
+         caller holds the pending step (launch-first keeps two steps in flight)."""
++        p1_observe.batch(self, batch, "async_launch")
+         self.emit_prefill_start_for_batch(batch)
+         self.stamp_batch_launch(batch)
+         sched_output = self.build_sched_output(batch)
+@@ -2677,6 +2682,7 @@
+         emitted here, ahead of its flush and terminal result.
+         """
+         for req in reqs:
++            p1_observe.tokens_observed(self, req)
+             if skip_req is not None and req is skip_req:
+                 continue
+             else:
+@@ -2768,6 +2774,7 @@
+                     pass
+                 # Drain runner stream buffers before the terminal payload; both
+                 # use this outbox, so remaining chunks stay ahead of stream done.
++                p1_observe.terminal(self, req)
+                 finished_reason = req.finished_reason
+                 data.finish_reason = (
+                     finished_reason.to_json().get("type")
+@@ -3337,6 +3344,7 @@
+                 "weight_version": get_serving().weight_version,
+             }
+         )
++        info["p1_memory"] = p1_observe.scheduler_memory(self)
+         return {"success": True, "message": "ok", "data": info}
+ 
+     def admin_pause_generation(self, payload: dict[str, object]) -> AdminActionResult:
+@@ -3820,7 +3828,9 @@
+             return
+         else:
+             pass
++        p1_observe.release(self, req, "before")
+         release_kv_cache(req, self.tree_cache, checkpoint=True)
++        p1_observe.release(self, req, "after")
+ 
+     # note (0xtoward): with autograd on, writes to reused buffers leak every step.
+     @DynamicGradMode()
+--- a/sglang_omni/serve/openai_api.py
++++ b/sglang_omni/serve/openai_api.py
+@@ -955,7 +955,10 @@
+         "weight_version",
+         mixed_status_code=409,
+     )
++    import p1_observe
++
+     payload: dict[str, object] = dict(result)
++    payload["p3_coordinator_events"] = p1_observe.native_events
+     payload.update(
+         {
+             "weight_version": weight_version,

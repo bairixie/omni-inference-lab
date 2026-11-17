@@ -1,0 +1,274 @@
+{
+  "workspace_variable": "OMNI_WORKSPACE",
+  "research_run_relative_path": "results/meeting_2026-11-19/p0_20261116T182747-0500",
+  "bundle_data_relative_path": "deliverables/meeting_2026-11-19/data",
+  "recorded_at_scope": "Before R1 handoff and project index append; original index hashes intentionally refer to the pre-edit state.",
+  "artifacts": [
+    {
+      "workspace_relative_path": "PROJECT_STATE.md",
+      "sha256": "ff1d8022ae34d43047071bda815cfcb39775eb9617c27819e946416c4ce3b3b5",
+      "bytes": 20313,
+      "role": "Research index",
+      "preserved_copy_workspace_relative_path": "deliverables/meeting_2026-11-19/r1_20261117T175231-0500/raw/project_state_before.md"
+    },
+    {
+      "workspace_relative_path": "docs/RESEARCH_RULES_zh.md",
+      "sha256": "14ad92071428e9caba60d6f77b108ba33cbc6d494d3549311764383dabc5ab9c",
+      "bytes": 6974,
+      "role": "Original research rules"
+    },
+    {
+      "workspace_relative_path": "results/meeting_2026-11-19/p0_20261116T182747-0500/phase0/audit_zh.md",
+      "sha256": "610384f598ea04493f1521772a653df48fdc129f00a093213384a654efbdb5bb",
+      "bytes": 20412,
+      "role": "Original research record; retained outside this repository"
+    },
+    {
+      "workspace_relative_path": "results/meeting_2026-11-19/p0_20261116T182747-0500/phase1/findings_zh.md",
+      "sha256": "fc1a6d3bdf28ffb89a4022ffc8505ba1036d21a7c061c35a9ac9bfe00d2fe181",
+      "bytes": 15993,
+      "role": "Original research record; retained outside this repository"
+    },
+    {
+      "workspace_relative_path": "results/meeting_2026-11-19/p0_20261116T182747-0500/phase2/findings_zh.md",
+      "sha256": "93691c06f980e7385fcec046d133df7707881c0bf3016207b4118e42b2b54f75",
+      "bytes": 19652,
+      "role": "Original research record; retained outside this repository"
+    },
+    {
+      "workspace_relative_path": "results/meeting_2026-11-19/p0_20261116T182747-0500/phase3/findings_zh.md",
+      "sha256": "2e277b1da2cc162c4bc52f54ae97c5ad09f17dd0445989c6db6292387d618339",
+      "bytes": 16749,
+      "role": "Original research record; retained outside this repository"
+    },
+    {
+      "workspace_relative_path": "results/meeting_2026-11-19/p0_20261116T182747-0500/HANDOFF.md",
+      "sha256": "8bfeb50646994a1d10a69c8bdbe1e8e0d29297856ad9cdf69543a51e6f8307cf",
+      "bytes": 3938,
+      "role": "Research handoff",
+      "preserved_copy_workspace_relative_path": "deliverables/meeting_2026-11-19/r1_20261117T175231-0500/raw/handoff_before.md"
+    },
+    {
+      "workspace_relative_path": "deliverables/meeting_2026-11-19/REVIEW_FOR_CHATGPT_zh.md",
+      "sha256": "7b8daacb18b1d8f955ad4990e3b5f5a134531282cf5dccf57db16316ae8c6d1d",
+      "bytes": 24960,
+      "role": "Original review report"
+    },
+    {
+      "workspace_relative_path": "deliverables/meeting_2026-11-19/omni_review_bundle.zip",
+      "sha256": "ab06d3978a2b80911433480bf6129b9bbbe47544b239551b0775424f550597ee",
+      "bytes": 630184,
+      "role": "Preserved original evidence bundle"
+    },
+    {
+      "workspace_relative_path": "results/meeting_2026-11-19/p0_20261116T182747-0500/phase3/related_work_rows.csv",
+      "sha256": "99b0e3c651ea3d2ba380770a1877a2b609866ffe90b9571222aded40805a421e",
+      "bytes": 8153,
+      "role": "Prior upstream audit"
+    },
+    {
+      "workspace_relative_path": "deliverables/meeting_2026-11-19/scripts/verify_tables.py",
+      "sha256": "793382cb8de651ed075c5d4c600b2e0560d290b2f743202fbe78494777ca26b9",
+      "bytes": 2872,
+      "role": "Origin of offline numerical checks"
+    },
+    {
+      "workspace_relative_path": "deliverables/meeting_2026-11-19/data/p0_61_token_accounting.json",
+      "sha256": "35545a713f8b251e15065ea8f76c302e47f9cf3a8a16572a5e144647ed6141b5",
+      "bytes": 2311,
+      "role": "External evidence; retained in the original workspace, not an eligible issue attachment"
+    },
+    {
+      "workspace_relative_path": "deliverables/meeting_2026-11-19/data/p1_input_accounting.csv",
+      "sha256": "acf59f543cf9f02111bc5782262602da0fae8bf8bf2ae594578722c8bb167997",
+      "bytes": 7676,
+      "role": "External evidence; retained in the original workspace, not an eligible issue attachment"
+    },
+    {
+      "workspace_relative_path": "deliverables/meeting_2026-11-19/data/p1_memory_observability.csv",
+      "sha256": "8487d19f1ca94b1dd7761ecec201ece23005ef64413e0fa37ec0e908758a6761",
+      "bytes": 11109,
+      "role": "External evidence; retained in the original workspace, not an eligible issue attachment"
+    },
+    {
+      "workspace_relative_path": "deliverables/meeting_2026-11-19/data/p1_metrics.csv",
+      "sha256": "8fab487d609c59d628ed01c8232e3bdb30d8c5a001b50301c8bbb9ef618e558a",
+      "bytes": 6281,
+      "role": "External evidence; retained in the original workspace, not an eligible issue attachment"
+    },
+    {
+      "workspace_relative_path": "deliverables/meeting_2026-11-19/data/p2_boundary_outputs.json",
+      "sha256": "6d3884279ffebbc0d53a0ed69d87dcce5e225f99748c503ce6d7543596f13de0",
+      "bytes": 13359,
+      "role": "External evidence; retained in the original workspace, not an eligible issue attachment"
+    },
+    {
+      "workspace_relative_path": "deliverables/meeting_2026-11-19/data/p2_condition_summary.csv",
+      "sha256": "da2a3ae9b0ae81c8d2a8e09c4c7c0d03e501eb54fe6248e1c7edf0858e5a0135",
+      "bytes": 10082,
+      "role": "External evidence; retained in the original workspace, not an eligible issue attachment"
+    },
+    {
+      "workspace_relative_path": "deliverables/meeting_2026-11-19/data/p2_length_metrics.csv",
+      "sha256": "277a8bf8dc2f69cafe830406123e1f5c9dd5c57137bd2dab47ba2f33bcfd554f",
+      "bytes": 43635,
+      "role": "External evidence; retained in the original workspace, not an eligible issue attachment"
+    },
+    {
+      "workspace_relative_path": "deliverables/meeting_2026-11-19/data/p2_pair_recheck.csv",
+      "sha256": "d09b261890c18e1917236b86ad821eb11c485ccba5277383bea41fea40f97bef",
+      "bytes": 2739,
+      "role": "External evidence; retained in the original workspace, not an eligible issue attachment"
+    },
+    {
+      "workspace_relative_path": "deliverables/meeting_2026-11-19/data/p2_reference_checks.csv",
+      "sha256": "76b504c64b7b10be77ceb45a3b2adad097b4c94004a3efdfc7f0b8530f845ced",
+      "bytes": 44348,
+      "role": "External evidence; retained in the original workspace, not an eligible issue attachment"
+    },
+    {
+      "workspace_relative_path": "deliverables/meeting_2026-11-19/data/p2_workload_manifest.json",
+      "sha256": "ce0f2ca9f20a6096893c29fa5f0ad7bb3826085241b72dab694565e2d03ad870",
+      "bytes": 25557,
+      "role": "External evidence; retained in the original workspace, not an eligible issue attachment"
+    },
+    {
+      "workspace_relative_path": "deliverables/meeting_2026-11-19/data/p3_batch_summary.csv",
+      "sha256": "837279642163433be9488c2606da77101df560df32e893c41cd5d92c4dbcf84f",
+      "bytes": 8686,
+      "role": "External evidence; retained in the original workspace, not an eligible issue attachment"
+    },
+    {
+      "workspace_relative_path": "deliverables/meeting_2026-11-19/data/p3_encoder_peer_overlap.csv",
+      "sha256": "3a04d3c0c8efd86e5dfccb36b5868fdef356b6f34e1ea6eafa09b37e1f07f781",
+      "bytes": 23131,
+      "role": "External evidence; retained in the original workspace, not an eligible issue attachment"
+    },
+    {
+      "workspace_relative_path": "deliverables/meeting_2026-11-19/data/p3_key_results.csv",
+      "sha256": "2ff87d84394c8486e250bca781666be770a4ff28092cfa20010d246eebeaa3d8",
+      "bytes": 1146,
+      "role": "External evidence; retained in the original workspace, not an eligible issue attachment"
+    },
+    {
+      "workspace_relative_path": "deliverables/meeting_2026-11-19/data/p3_output_variations.json",
+      "sha256": "1513a1795ddcb1d29decda5d2cacb6772de505c36958a82f5f7e8646c677b4fd",
+      "bytes": 4712,
+      "role": "External evidence; retained in the original workspace, not an eligible issue attachment"
+    },
+    {
+      "workspace_relative_path": "deliverables/meeting_2026-11-19/data/p3_paired_changes.csv",
+      "sha256": "abf163c7c4eac993fd149ca019b0923db03d5ea9923086cb70f908674b619afa",
+      "bytes": 25610,
+      "role": "External evidence; retained in the original workspace, not an eligible issue attachment"
+    },
+    {
+      "workspace_relative_path": "deliverables/meeting_2026-11-19/data/p3_reference_checks.csv",
+      "sha256": "54bd6690de0e3d6e9d197fafd41bf218ad9841f50eb7ec307c54db7b851b8c1c",
+      "bytes": 199033,
+      "role": "External evidence; retained in the original workspace, not an eligible issue attachment"
+    },
+    {
+      "workspace_relative_path": "deliverables/meeting_2026-11-19/data/p3_request_metrics.csv",
+      "sha256": "4c6d5b28ef9cecfc23e3e3be23902eab6950516627da5940e96d073e5e1199cc",
+      "bytes": 123004,
+      "role": "External evidence; retained in the original workspace, not an eligible issue attachment"
+    },
+    {
+      "workspace_relative_path": "deliverables/meeting_2026-11-19/data/p3_run_summary.csv",
+      "sha256": "9fb5eb46f6a15cc7537ed8e7845cf2c1f027fb63fc9265529a9f0294479f3ec1",
+      "bytes": 9259,
+      "role": "External evidence; retained in the original workspace, not an eligible issue attachment"
+    },
+    {
+      "workspace_relative_path": "deliverables/meeting_2026-11-19/data/p3_stage_summary.csv",
+      "sha256": "3602715870e2d25d2621ded4e20d74060c9a8166f0536d81fcd7ace6f01fc04e",
+      "bytes": 2395,
+      "role": "External evidence; retained in the original workspace, not an eligible issue attachment"
+    },
+    {
+      "workspace_relative_path": "deliverables/meeting_2026-11-19/data/p3_step_mode_summary.csv",
+      "sha256": "8f222f443c0859781025bc8f59318e5cc0417f860a3fca6b329aca3435051cfe",
+      "bytes": 612,
+      "role": "External evidence; retained in the original workspace, not an eligible issue attachment"
+    },
+    {
+      "workspace_relative_path": "deliverables/meeting_2026-11-19/data/p3_timeline_batches.csv",
+      "sha256": "c419322eaeae06ab35265d868a11ce0b518ff632e378ebee41a5dacc15b379dd",
+      "bytes": 97769,
+      "role": "External evidence; retained in the original workspace, not an eligible issue attachment"
+    },
+    {
+      "workspace_relative_path": "deliverables/meeting_2026-11-19/data/p3_timeline_manifest.json",
+      "sha256": "7c8e5ad87721e8ca32976d3c8acdc9b0b6cd3999a8b12d2e1a0349b49cd6a2df",
+      "bytes": 1364,
+      "role": "External evidence; retained in the original workspace, not an eligible issue attachment"
+    },
+    {
+      "workspace_relative_path": "deliverables/meeting_2026-11-19/data/p3_timeline_requests.csv",
+      "sha256": "42a312da6b2bcfeb695ca3acf8328c59dbd0fa8da2f7c47f169700c5a8357eaa",
+      "bytes": 5014,
+      "role": "External evidence; retained in the original workspace, not an eligible issue attachment"
+    },
+    {
+      "workspace_relative_path": "deliverables/meeting_2026-11-19/data/p3_timeline_stages.csv",
+      "sha256": "d252ca436881075e3e977ddef672b8f597e9b72578cfff23946724f1a36d8b3b",
+      "bytes": 21342,
+      "role": "External evidence; retained in the original workspace, not an eligible issue attachment"
+    },
+    {
+      "workspace_relative_path": "deliverables/meeting_2026-11-19/data/provenance.json",
+      "sha256": "9e1d4a3c3c68e7403d296d0a07b9097233b31dd003dc7c572bae2d689c0c16e7",
+      "bytes": 4959,
+      "role": "External evidence; retained in the original workspace, not an eligible issue attachment"
+    },
+    {
+      "workspace_relative_path": "deliverables/meeting_2026-11-19/data/review_checks.json",
+      "sha256": "589ecdda3ebc234ba6bb37d42882c85e12b7e5bb012c2dbc4a124c32b9abaad5",
+      "bytes": 2886,
+      "role": "External evidence; retained in the original workspace, not an eligible issue attachment"
+    },
+    {
+      "workspace_relative_path": "deliverables/meeting_2026-11-19/data/validation_summary.json",
+      "sha256": "29b2835963393540f6ef094c6c38412473ba8486ab498121c5f92e3b71df532e",
+      "bytes": 13487,
+      "role": "External evidence; retained in the original workspace, not an eligible issue attachment"
+    },
+    {
+      "workspace_relative_path": "results/meeting_2026-11-19/p0_20261116T182747-0500/phase3/scripts/run_p3.py",
+      "sha256": "fed2c04ec3de45e3f21fa6500040d766b2abf53c45c814f331a3fc02bc35016e",
+      "bytes": 14186,
+      "role": "Archived reproduction source"
+    },
+    {
+      "workspace_relative_path": "results/meeting_2026-11-19/p0_20261116T182747-0500/phase2/scripts/prepare_inputs.py",
+      "sha256": "ab654b5f27e3fd856eeb2a487555bc97a64c0d7e5e48bbb9b3a1338c7b1f4f95",
+      "bytes": 4151,
+      "role": "Archived reproduction source"
+    },
+    {
+      "workspace_relative_path": "results/meeting_2026-11-19/p0_20261116T182747-0500/phase3/scripts/p1_observe.py",
+      "sha256": "88a96123ec39c2bbcd7876aa25d608144b6b0464a8d30e056beda23e495da3ff",
+      "bytes": 9845,
+      "role": "Archived reproduction source"
+    },
+    {
+      "workspace_relative_path": "scripts/serve_sglang_bench.py",
+      "sha256": "7832dc4e85b2f37d60e6d5cce5a7cb751b8d2905c5c6c5bd95b3b28919d70a1c",
+      "bytes": 1825,
+      "role": "Archived reproduction source"
+    },
+    {
+      "workspace_relative_path": "scripts/sglang_bench_factories.py",
+      "sha256": "d634a8121ef9b5e9dbf0d232671d8a361dfff769a948652b3cd9439bc7580156",
+      "bytes": 1030,
+      "role": "Archived reproduction source"
+    },
+    {
+      "workspace_relative_path": "scripts/activate_sglang.sh",
+      "sha256": "b703c14a9d41119e00cfcd8f681009a5d8a334f04c73c5bac8f196e29ee43477",
+      "bytes": 923,
+      "role": "Archived reproduction source"
+    }
+  ]
+}

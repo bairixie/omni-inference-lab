@@ -1,0 +1,44 @@
+{
+  "description": "Selected reproducibility facts from archived live runtime records; no new model execution.",
+  "omni_base_commit": "30da209c2330eaf50b1838fc82a2975c1ddc78f4",
+  "package_versions": {
+    "python": "3.12.3",
+    "sglang": "0.5.22",
+    "torch": "2.14.1+cu130",
+    "transformers": "5.19.0"
+  },
+  "gpu": {
+    "name": "NVIDIA RTX A6000",
+    "total_MiB": 46068,
+    "driver": "580.126.18"
+  },
+  "gpu_count": 1,
+  "logical_gpu_id": 0,
+  "model_repository": "openbmb/MiniCPM-o-4_5",
+  "model_snapshot": "eb4141de24550a3a1a4082f718be58f46b761728",
+  "processor_sha256": "3a1f017339b92c2fa768d7737db76cc4689d2280b68a71866b06f7dedc8ac1c2",
+  "processor_workspace_relative_path": "cache/sglang-hf-modules/transformers_modules/model/c492f6fd3def3fa8/processing_minicpmo.py",
+  "precision": {
+    "thinker": "bfloat16",
+    "talker": "bfloat16",
+    "code2wav": "float32"
+  },
+  "attention_backend": "triton",
+  "cpu_quota": 16,
+  "omp_num_threads": 8,
+  "mps_enabled": false,
+  "service_mode": "Speech-capable deployment; nonstreaming HTTP text-only response for audio transcription",
+  "tensor_parallel_size": 1,
+  "actual_import_evidence": {
+    "scheduler_workspace_relative_path": "results/meeting_2026-11-19/p0_20261116T182747-0500/phase3/source/sglang_omni/scheduling/omni_scheduler.py",
+    "request_class": "ThinkerRequest",
+    "source_identity": {
+      "workspace_relative_path": "results/meeting_2026-11-19/p0_20261116T182747-0500/phase3/runs/baseline_v1/source_identity.json",
+      "sha256": "5ac3e2a088d53472685a141e16eb60b733142c3f37c890eee6438e96b71a54a5",
+      "bytes": 123399,
+      "role": "Archived runtime source fingerprint"
+    }
+  },
+  "model_config_sha256": "b0c03cf9f0cfc1178ade50e4ba62727ca7a77aa6a6a71eda6668d8f289e96c1d",
+  "dependencies_scope": "Selected runtime packages, not an environment lock or installation recipe."
+}

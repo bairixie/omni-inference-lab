@@ -1,0 +1,61 @@
+{
+  "upstream_repository": "https://github.com/sgl-project/sglang-omni",
+  "base_commit": "30da209c2330eaf50b1838fc82a2975c1ddc78f4",
+  "apply_order": [
+    "0001-minicpmo-retraction-restore.patch",
+    "0002-request-batch-observation.patch"
+  ],
+  "scope": "MiniCPM-o correctness backport and archived request/batch instrumentation. No performance optimization.",
+  "files": [
+    {
+      "path": "sglang_omni/models/minicpm_o/components/preprocessor.py",
+      "base_sha256": "5b4d0b568e4d9a95c1b62f9b1fa34baf30bb601c9306998cc569490429cd405d",
+      "corrected_sha256": "5b4d0b568e4d9a95c1b62f9b1fa34baf30bb601c9306998cc569490429cd405d",
+      "measured_sha256": "03783913a843d73d8b70256dc661f082dfd901087cec9cae0131cf9d36d58c13"
+    },
+    {
+      "path": "sglang_omni/models/minicpm_o/merge.py",
+      "base_sha256": "14ac447007136c0076675626a4a1a5a30ac4ab58fa1553740e233aba1e6b2f73",
+      "corrected_sha256": "14ac447007136c0076675626a4a1a5a30ac4ab58fa1553740e233aba1e6b2f73",
+      "measured_sha256": "38dbdefecd9201437589a7615ffb7d6e74b4a28114a515fd77481b374f33b37e"
+    },
+    {
+      "path": "sglang_omni/models/minicpm_o/request_builders.py",
+      "base_sha256": "4420dabeb540e1da889f5ba2d9edaf3dad7bc3148f699aca6b3f05788c3b9232",
+      "corrected_sha256": "8b5564aaa7eaf59961b77523225ed71f3ceba1f5f5c2e1bd95c69de5a3c1a8b7",
+      "measured_sha256": "8b5564aaa7eaf59961b77523225ed71f3ceba1f5f5c2e1bd95c69de5a3c1a8b7"
+    },
+    {
+      "path": "sglang_omni/models/minicpm_o/stages.py",
+      "base_sha256": "cc72e8c1f8fe10c00c930d31410c7c41891639741268a200457a22375ba74b12",
+      "corrected_sha256": "cc72e8c1f8fe10c00c930d31410c7c41891639741268a200457a22375ba74b12",
+      "measured_sha256": "1ded936ef33df87ce576f1df5662ede83e53e153c4b9d03a0cb1af4d4edf59c8"
+    },
+    {
+      "path": "sglang_omni/profiler/event_recorder.py",
+      "base_sha256": "b252a49e8fc27930efaa442f86eee00a2aeef02a8c216e9bb00ab03bb51f4240",
+      "corrected_sha256": "b252a49e8fc27930efaa442f86eee00a2aeef02a8c216e9bb00ab03bb51f4240",
+      "measured_sha256": "ab8e92a3aec66714cef60f584881681c259a36864bf15c6b4b099ccc2a46fb89"
+    },
+    {
+      "path": "sglang_omni/scheduling/omni_scheduler.py",
+      "base_sha256": "80194722b6ee1cf97a0c246a6d8c638a4ec2663919ddb3f4e7223178e4406282",
+      "corrected_sha256": "80194722b6ee1cf97a0c246a6d8c638a4ec2663919ddb3f4e7223178e4406282",
+      "measured_sha256": "569aacb45280a1bd3a6f4b47b0f7daa0e6400a478a44690b64d0dc8646054a82"
+    },
+    {
+      "path": "sglang_omni/scheduling/sglang_backend/request_data.py",
+      "base_sha256": "2a1bebeb81e959fb72255bac260e3b54442a8eb9c820597197e65ac2714a2bb6",
+      "corrected_sha256": "4166ccc881cbd798de21c4e91c75d81cd2d9b7bc856dd1e2f8cbf4043d97a460",
+      "measured_sha256": "4166ccc881cbd798de21c4e91c75d81cd2d9b7bc856dd1e2f8cbf4043d97a460"
+    },
+    {
+      "path": "sglang_omni/serve/openai_api.py",
+      "base_sha256": "03212eecd374feae09c34a7d88ddc80d0b8f480e3e49238e986152aa4afbca62",
+      "corrected_sha256": "03212eecd374feae09c34a7d88ddc80d0b8f480e3e49238e986152aa4afbca62",
+      "measured_sha256": "4e439edd632a97801c9a7d4a57c1bec21b492244c51562791266ecc43afb1319"
+    }
+  ],
+  "observer_module": "instrumentation/p1_observe.py",
+  "observer_sha256": "88a96123ec39c2bbcd7876aa25d608144b6b0464a8d30e056beda23e495da3ff"
+}

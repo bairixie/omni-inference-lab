@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="940" viewBox="0 0 1600 940">
+<rect width="1600" height="940" fill="white"/>
+<text x="40" y="59" font-family="DejaVu Sans, sans-serif" font-size="34" font-weight="bold" fill="#182b43">MiniCPM-o 4.5: conceptual model components</text>
+<text x="40" y="101" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="normal" fill="#182b43">A model example, not a universal Omni architecture or a measured timeline</text>
+<rect x="40" y="150" width="210" height="76" rx="9" fill="#e5f0fd" stroke="#45658b" stroke-width="2"/>
+<text x="55" y="192.5" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="bold" fill="#182b43">Text</text>
+<rect x="40" y="275" width="210" height="76" rx="9" fill="#e5f0fd" stroke="#45658b" stroke-width="2"/>
+<text x="55" y="317.5" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="bold" fill="#182b43">Images</text>
+<rect x="40" y="400" width="210" height="76" rx="9" fill="#e5f0fd" stroke="#45658b" stroke-width="2"/>
+<text x="55" y="442.5" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="bold" fill="#182b43">Audio</text>
+<rect x="40" y="530" width="210" height="90" rx="9" fill="#e5f0fd" stroke="#45658b" stroke-width="2"/>
+<text x="55" y="565.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="bold" fill="#182b43">Video</text>
+<text x="55" y="590.0" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="normal" fill="#182b43">Timed frames/audio</text>
+<rect x="330" y="150" width="330" height="76" rx="9" fill="#e5f0fd" stroke="#45658b" stroke-width="2"/>
+<text x="345" y="191.5" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="bold" fill="#182b43">Tokenizer + embeddings</text>
+<rect x="330" y="275" width="330" height="90" rx="9" fill="#e5f0fd" stroke="#45658b" stroke-width="2"/>
+<text x="345" y="310.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="bold" fill="#182b43">SigLip2 vision encoder</text>
+<text x="345" y="339.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="normal" fill="#182b43">Resampler / projection</text>
+<rect x="330" y="400" width="330" height="110" rx="9" fill="#e5f0fd" stroke="#45658b" stroke-width="2"/>
+<text x="345" y="428.5" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="bold" fill="#182b43">Whisper-medium encoder</text>
+<text x="345" y="459.5" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="normal" fill="#182b43">Features / projection</text>
+<text x="345" y="488.5" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="normal" fill="#182b43">Pooling</text>
+<rect x="780" y="255" width="340" height="210" rx="9" fill="#e5f0fd" stroke="#45658b" stroke-width="2"/>
+<text x="795" y="321.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="bold" fill="#182b43">Thinker</text>
+<text x="795" y="350.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="normal" fill="#182b43">Qwen3-8B backbone</text>
+<text x="795" y="379.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="normal" fill="#182b43">Prefill: input positions</text>
+<text x="795" y="408.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="normal" fill="#182b43">Decode: next tokens</text>
+<rect x="1250" y="280" width="300" height="110" rx="9" fill="#e5f0fd" stroke="#45658b" stroke-width="2"/>
+<text x="1265" y="325.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="bold" fill="#182b43">Text output</text>
+<text x="1265" y="354.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="normal" fill="#182b43">Detokenization</text>
+<polyline points="250,188 330,188" fill="none" stroke="#436080" stroke-width="3"/><polygon points="330,188 319.1946347717679,193.21958640933477 319.1946347717679,182.78041359066523" fill="#436080"/>
+<polyline points="250,320 330,320" fill="none" stroke="#436080" stroke-width="3"/><polygon points="330,320 319.1946347717679,325.21958640933474 319.1946347717679,314.78041359066526" fill="#436080"/>
+<polyline points="250,455 330,455" fill="none" stroke="#436080" stroke-width="3"/><polygon points="330,455 319.1946347717679,460.21958640933474 319.1946347717679,449.78041359066526" fill="#436080"/>
+<polyline points="660,188 720,188 720,350 780,350" fill="none" stroke="#436080" stroke-width="3"/><polygon points="780,350 769.1946347717678,355.21958640933474 769.1946347717678,344.78041359066526" fill="#436080"/>
+<polyline points="660,320 720,320 720,350 780,350" fill="none" stroke="#436080" stroke-width="3"/><polygon points="780,350 769.1946347717678,355.21958640933474 769.1946347717678,344.78041359066526" fill="#436080"/>
+<polyline points="660,455 720,455 720,350 780,350" fill="none" stroke="#436080" stroke-width="3"/><polygon points="780,350 769.1946347717678,355.21958640933474 769.1946347717678,344.78041359066526" fill="#436080"/>
+<polyline points="1120,335 1250,335" fill="none" stroke="#436080" stroke-width="3"/><polygon points="1250,335 1239.1946347717678,340.21958640933474 1239.1946347717678,329.78041359066526" fill="#436080"/>
+<polyline points="250,552 290,552 290,335 330,335" fill="none" stroke="#436080" stroke-width="3" stroke-dasharray="10 7"/><polygon points="330,335 319.1946347717679,340.21958640933474 319.1946347717679,329.78041359066526" fill="#436080"/>
+<polyline points="250,595 305,595 305,470 330,470" fill="none" stroke="#436080" stroke-width="3" stroke-dasharray="10 7"/><polygon points="330,470 319.1946347717679,475.21958640933474 319.1946347717679,464.78041359066526" fill="#436080"/>
+<rect x="470" y="670" width="300" height="110" rx="9" fill="#e5f0fd" stroke="#45658b" stroke-width="2"/>
+<text x="485" y="715.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="bold" fill="#182b43">Talker</text>
+<text x="485" y="744.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="normal" fill="#182b43">Speech codec tokens</text>
+<rect x="860" y="670" width="300" height="110" rx="9" fill="#e5f0fd" stroke="#45658b" stroke-width="2"/>
+<text x="875" y="715.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="bold" fill="#182b43">Flow</text>
+<text x="875" y="744.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="normal" fill="#182b43">Acoustic features</text>
+<rect x="1250" y="670" width="300" height="110" rx="9" fill="#e5f0fd" stroke="#45658b" stroke-width="2"/>
+<text x="1265" y="715.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="bold" fill="#182b43">HiFT</text>
+<text x="1265" y="744.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="normal" fill="#182b43">Waveform output</text>
+<polyline points="950,465 950,580 620,580 620,670" fill="none" stroke="#436080" stroke-width="3" stroke-dasharray="10 7"/><polygon points="620,670 614.7804135906653,659.1946347717678 625.2195864093347,659.1946347717678" fill="#436080"/>
+<text x="650" y="605" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="normal" fill="#182b43">Speech conditioning</text>
+<polyline points="770,725 860,725" fill="none" stroke="#436080" stroke-width="3" stroke-dasharray="10 7"/><polygon points="860,725 849.1946347717678,730.2195864093347 849.1946347717678,719.7804135906653" fill="#436080"/>
+<polyline points="1160,725 1250,725" fill="none" stroke="#436080" stroke-width="3" stroke-dasharray="10 7"/><polygon points="1250,725 1239.1946347717678,730.2195864093347 1239.1946347717678,719.7804135906653" fill="#436080"/>
+<rect x="40" y="685" width="320" height="90" rx="9" fill="#f5ecdb" stroke="#45658b" stroke-width="2"/>
+<text x="55" y="720.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="bold" fill="#182b43">Optional reference</text>
+<text x="55" y="749.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="normal" fill="#182b43">Voice conditioning</text>
+<polyline points="360,730 410,730 410,820 1005,820 1005,780" fill="none" stroke="#436080" stroke-width="3" stroke-dasharray="10 7"/><polygon points="1005,780 1010.2195864093347,790.8053652282322 999.7804135906653,790.8053652282322" fill="#436080"/>
+<text x="860" y="866" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="normal" fill="#182b43">Flow + HiFT = Code2Wav stage</text>
+<text x="40" y="905" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="normal" fill="#182b43">Dashed routes depend on the task and output mode. Real-time sessions add incremental state and scheduling.</text>
+</svg>

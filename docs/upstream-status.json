@@ -1,0 +1,83 @@
+{
+  "scope": "One bounded refresh of six directly relevant upstream items. Full API responses remain in the original workspace. Linked projects and all subsequent changes were not exhaustively audited.",
+  "items": [
+    {
+      "number": 2316,
+      "url": "https://github.com/sgl-project/sglang-omni/pull/2316",
+      "title": "[Perf][MiniCPM-o] Parallelize preprocessing by default",
+      "state": "closed",
+      "checked_at": "2026-11-17T17:55:47.483883-05:00",
+      "updated_at": "2026-10-28T23:58:48Z",
+      "issue_comments_read": 8,
+      "confidence": "API response read; no pagination remained",
+      "merged": true,
+      "merged_at": "2026-10-28T23:58:48Z",
+      "head_commit": "c670a33407ca9776d877165c7f109ad2aeaab965",
+      "base_commit": "65c5b0b2ea192057dd39d1c011028d1e006eeb74",
+      "review_comments_read": 3,
+      "reviews_read": 4
+    },
+    {
+      "number": 2320,
+      "url": "https://github.com/sgl-project/sglang-omni/pull/2320",
+      "title": "[Perf][MiniCPM-o] Enable cross-request audio encoder batching by default",
+      "state": "open",
+      "checked_at": "2026-11-17T17:55:47.483883-05:00",
+      "updated_at": "2026-11-17T14:58:12Z",
+      "issue_comments_read": 4,
+      "confidence": "API response read; no pagination remained",
+      "merged": false,
+      "merged_at": null,
+      "head_commit": "18d5856c2419a2b28617bc23289de233c6043e3c",
+      "base_commit": "cad3ac7f89da3603c1bfd45755971f599579fdf9",
+      "review_comments_read": 1,
+      "reviews_read": 2
+    },
+    {
+      "number": 3701,
+      "url": "https://github.com/sgl-project/sglang-omni/pull/3701",
+      "title": "[Fix][MiniCPM-o] Restore the thinker's multimodal inputs on retraction",
+      "state": "closed",
+      "checked_at": "2026-11-17T17:55:47.483883-05:00",
+      "updated_at": "2026-11-10T04:01:38Z",
+      "issue_comments_read": 0,
+      "confidence": "API response read; no pagination remained",
+      "merged": true,
+      "merged_at": "2026-11-10T04:01:34Z",
+      "head_commit": "ca1baee8c36e41cd884730f4dcdbe98ac8bdc07f",
+      "base_commit": "5913ffcb32c4a5f8444706646d41696c72c800c9",
+      "review_comments_read": 0,
+      "reviews_read": 1
+    },
+    {
+      "number": 2580,
+      "url": "https://github.com/sgl-project/sglang-omni/issues/2580",
+      "title": "[Runtime Profiling] MiniCPM-o 4.5 Video-AMME: video plus spoken question in, text and speech out",
+      "state": "open",
+      "checked_at": "2026-11-17T17:55:47.483883-05:00",
+      "updated_at": "2026-10-07T12:40:50Z",
+      "issue_comments_read": 2,
+      "confidence": "API response read; no pagination remained"
+    },
+    {
+      "number": 3910,
+      "url": "https://github.com/sgl-project/sglang-omni/issues/3910",
+      "title": "[Runtime Profiling] MiniCPM-o 4.5 full-duplex",
+      "state": "open",
+      "checked_at": "2026-11-17T17:55:47.483883-05:00",
+      "updated_at": "2026-11-13T08:35:49Z",
+      "issue_comments_read": 1,
+      "confidence": "API response read; no pagination remained"
+    },
+    {
+      "number": 3034,
+      "url": "https://github.com/sgl-project/sglang-omni/issues/3034",
+      "title": "[Measurement][MiniCPM-o] Encoder-output cache: request ordering, capacity, and CPU/GPU placement",
+      "state": "open",
+      "checked_at": "2026-11-17T17:55:47.483883-05:00",
+      "updated_at": "2026-10-27T04:36:53Z",
+      "issue_comments_read": 2,
+      "confidence": "API response read; no pagination remained"
+    }
+  ]
+}
