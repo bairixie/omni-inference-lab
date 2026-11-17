@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title description">
+  <title id="title">MiniCPM-o 4.5: from inputs to text and speech</title>
+  <desc id="description">Text is tokenized. Images and video frames pass through the vision encoder. Audio passes through the audio encoder. The Thinker uses the selected inputs to answer. It returns text and can condition an optional speech branch: Talker, Flow and HiFT. SGLang Omni coordinates the stages. This is a simplified question-answering path, not a process placement or latency diagram.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#718096"/>
+    </marker>
+    <marker id="speech-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#238575"/>
+    </marker>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; fill: #172b4d; }
+      .heading { font-size: 22px; font-weight: 600; }
+      .body { font-size: 17px; fill: #465773; }
+      .label { font-size: 14px; font-weight: 600; letter-spacing: 1.6px; fill: #60708a; }
+      .wire { fill: none; stroke: #718096; stroke-width: 2.2; stroke-linejoin: round; stroke-linecap: round; }
+    </style>
+  </defs>
+  <rect width="1200" height="560" rx="16" fill="#ffffff"/>
+  <text x="32" y="45" font-size="28" font-weight="700">MiniCPM-o 4.5</text>
+  <text x="32" y="76" font-size="18" fill="#465773">One request follows the input and output paths it needs.</text>
+
+  <text x="32" y="121" class="label">INPUT</text>
+  <text x="278" y="121" class="label">PREPARE &amp; ENCODE</text>
+  <text x="588" y="121" class="label">UNDERSTAND &amp; GENERATE</text>
+  <text x="911" y="121" class="label">RESPONSE</text>
+
+  <g fill="#f7f9fc" stroke="#d6deea" stroke-width="1.5">
+    <rect x="32" y="152" width="190" height="84" rx="12"/>
+    <rect x="32" y="272" width="190" height="84" rx="12"/>
+    <rect x="32" y="392" width="190" height="84" rx="12"/>
+  </g>
+  <text x="50" y="184" class="heading">Text</text>
+  <text x="50" y="213" class="body">Prompt / question</text>
+  <text x="50" y="304" class="heading">Images / video</text>
+  <text x="50" y="333" class="body">Selected frames</text>
+  <text x="50" y="424" class="heading">Audio</text>
+  <text x="50" y="453" class="body">Recording / question</text>
+
+  <g fill="#eff5ff" stroke="#b9cee9" stroke-width="1.5">
+    <rect x="278" y="152" width="238" height="84" rx="12"/>
+    <rect x="278" y="272" width="238" height="84" rx="12"/>
+    <rect x="278" y="392" width="238" height="84" rx="12"/>
+  </g>
+  <text x="296" y="184" class="heading">Text preparation</text>
+  <text x="296" y="213" class="body">Tokenizer + embeddings</text>
+  <text x="296" y="304" class="heading">Vision encoder</text>
+  <text x="296" y="333" class="body">SigLip2 + resampler</text>
+  <text x="296" y="424" class="heading">Audio encoder</text>
+  <text x="296" y="453" class="body">Whisper-medium</text>
+
+  <path class="wire" d="M222 194 H273" marker-end="url(#arrow)"/>
+  <path class="wire" d="M222 314 H273" marker-end="url(#arrow)"/>
+  <path class="wire" d="M222 434 H273" marker-end="url(#arrow)"/>
+  <path class="wire" d="M516 194 H552 V434 H516 M516 314 H583" marker-end="url(#arrow)"/>
+  <circle cx="552" cy="314" r="4" fill="#718096"/>
+
+  <rect x="588" y="220" width="245" height="188" rx="16" fill="#eaf0ff" stroke="#8ba5d5" stroke-width="1.8"/>
+  <text x="710.5" y="259" text-anchor="middle" font-size="26" font-weight="700">Thinker</text>
+  <text x="710.5" y="291" text-anchor="middle" font-size="21">Qwen3-8B</text>
+  <path d="M612 310 H809" stroke="#bdcde9" stroke-width="1"/>
+  <text x="710.5" y="341" text-anchor="middle" class="body">Read combined inputs</text>
+  <text x="710.5" y="370" text-anchor="middle" class="body">Generate answer tokens</text>
+
+  <path class="wire" d="M833 279 H870 V214 H906" marker-end="url(#arrow)"/>
+  <rect x="911" y="174" width="257" height="80" rx="12" fill="#f7f9fc" stroke="#d6deea" stroke-width="1.5"/>
+  <text x="931" y="207" class="heading">Text response</text>
+  <text x="931" y="235" class="body">Words returned to the user</text>
+
+  <path d="M833 350 H870 V395.5 H906" fill="none" stroke="#238575" stroke-width="2.2" stroke-dasharray="6 5" stroke-linejoin="round" marker-end="url(#speech-arrow)"/>
+  <text x="911" y="300" font-size="14" font-weight="600" fill="#238575">WHEN SPEECH IS REQUESTED</text>
+  <rect x="911" y="319" width="257" height="153" rx="12" fill="#ecf8f4" stroke="#8fc8b8" stroke-width="1.5"/>
+  <text x="931" y="353" class="heading">Speech response</text>
+  <text x="931" y="385" font-size="18">Talker → Flow → HiFT</text>
+  <text x="931" y="414" class="body">Speech codes → waveform</text>
+  <text x="931" y="443" class="body">Audio returned to the user</text>
+
+  <rect x="32" y="504" width="1136" height="40" rx="10" fill="#f1f5fa"/>
+  <text x="50" y="530" font-size="18" font-weight="700">SGLang Omni</text>
+  <text x="210" y="530" font-size="17" fill="#465773">Routes requests · schedules stages · moves data</text>
+</svg>

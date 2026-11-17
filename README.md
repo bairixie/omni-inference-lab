@@ -16,6 +16,10 @@ We study three questions:
 
 ## How the pieces fit
 
+![MiniCPM-o input, language and response paths](docs/figures/inference-path.svg)
+
+*Simplified question-answering path. Video can also supply audio; speech output is optional.*
+
 **MiniCPM-o is the model:** its encoders interpret media, its language backbone generates answers, and its speech branch produces audio. **SGLang Omni is the serving system:** it routes work, schedules stages and transfers their outputs.
 
 ## Explore
