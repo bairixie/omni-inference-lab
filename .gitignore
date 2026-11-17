@@ -1,4 +1,14 @@
 # Runtime assets remain outside this repository.
+.DS_Store
+/results/
+/logs/
+/deliverables/
+/datasets/
+/raw-traces/
+/tmp/
+/PROJECT_STATE.md
+/HANDOFF.md
+/E1_TASK.md
 __pycache__/
 *.py[cod]
 .venv/
