@@ -27,6 +27,7 @@ We study three questions:
 - [Architecture and task paths](docs/architecture.md)
 - [Memory and caches](docs/memory.md)
 - [How to investigate a bottleneck](docs/profiling.md)
+- [Related papers and reading order](related-papers/README.md)
 - [Relevant upstream investigations](docs/upstream.md)
 - [Bottleneck reports](https://github.com/bairixie/omni-inference-lab/issues) — evidence, reproduction and follow-up optimization.
 
