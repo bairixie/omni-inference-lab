@@ -36,3 +36,7 @@ SGLang Omni receives the request, routes it between stages, schedules ready work
 A **stage** is a logical step, not necessarily a separate process or GPU. Multiple stages can share one GPU. A **batch** is work executed together; **concurrency** is the number of requests in flight. Eight concurrent requests do not necessarily form one batch of eight.
 
 Actual placement and overlap depend on the running configuration. Trace that configuration before assigning a delay to a component. [Runtime architecture](https://sgl-project.github.io/sglang-omni/developer_reference/main.html) · [Profiling guide](profiling.md).
+
+The [README's execution diagram](../README.md#the-runtime-how-sglang-omni-executes-the-model) shows a concrete upstream default and identifies its source commit. In that offline speech configuration, the input path and Thinker share the `pipeline` process; Talker and Code2Wav share the `talker` process. Both processes use one GPU, while each stage keeps its own scheduling role. This is a configuration choice, not an architectural requirement.
+
+One source-code naming detail: the stage named `decode` converts Thinker output tokens into response text. It is not the Thinker's autoregressive **decode phase**, which generates tokens. Distinguish the two when labeling a trace.

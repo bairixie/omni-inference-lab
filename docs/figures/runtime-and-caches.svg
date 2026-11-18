@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="852" viewBox="0 0 1200 852" role="img" aria-labelledby="title description">
+  <title id="title">SGLang Omni: execution and cache ownership</title>
+  <desc id="description">A media question enters the API and coordinator. In the pipeline process, preprocessing routes it to the required audio or image encoders and then the Thinker. Encoder-output caches live in CPU RAM; the Thinker owns GPU KV. For speech output, a second process runs the Talker with its own GPU KV, then Code2Wav with reference-voice conditioning on the GPU. Both processes use the same GPU in the pinned default configuration. Text-only inputs bypass media encoders. Arrows show dependencies, not durations or guaranteed overlap.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#59728c"/></marker>
+    <marker id="green-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#238575"/></marker>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; fill: #172b4d; }
+      .heading { font-size: 23px; font-weight: 700; }
+      .body { font-size: 18px; fill: #465773; }
+      .small { font-size: 17px; fill: #465773; }
+      .tag { font-size: 17px; font-weight: 600; }
+      .wire { fill: none; stroke: #59728c; stroke-width: 2.4; stroke-linejoin: round; stroke-linecap: round; }
+      .speech { fill: none; stroke: #238575; stroke-width: 2.4; stroke-linejoin: round; stroke-linecap: round; }
+    </style>
+  </defs>
+  <rect width="1200" height="852" rx="16" fill="#fff"/>
+  <text x="32" y="43" font-size="28" font-weight="700">SGLang Omni: execution and cache ownership</text>
+  <text x="32" y="74" class="body">Example: a media question answered with text and speech on one GPU.</text>
+
+  <rect x="32" y="100" width="236" height="65" rx="12" fill="#f1f5fa" stroke="#cbd6e3"/>
+  <text x="150" y="139" text-anchor="middle" class="heading">Client request</text>
+  <path d="M268 132 H311" class="wire" marker-end="url(#arrow)"/>
+  <rect x="316" y="100" width="852" height="65" rx="12" fill="#f1f5fa" stroke="#cbd6e3"/>
+  <text x="338" y="127" font-size="21" font-weight="700">HTTP API + coordinator</text>
+  <text x="338" y="151" class="small">Track the request, enter the stage graph, collect outputs and handle cancellation.</text>
+
+  <rect x="32" y="202" width="1136" height="250" rx="14" fill="#f7faff" stroke="#b9cee9" stroke-width="1.5"/>
+  <text x="54" y="232" font-size="19" font-weight="700">Process: pipeline</text>
+  <text x="1010" y="232" class="tag">GPU 0</text>
+  <path d="M430 165 V184 H280 V245" class="wire" marker-end="url(#arrow)"/>
+
+  <rect x="56" y="250" width="250" height="166" rx="12" fill="#fff" stroke="#cbd6e3"/>
+  <text x="74" y="280" class="heading">Preprocessing</text>
+  <text x="74" y="311" class="body">Host worker queue</text>
+  <text x="74" y="340" class="body">Prepare text, frames</text>
+  <text x="74" y="365" class="body">and audio features</text>
+  <text x="74" y="398" class="small">Route required branches</text>
+  <path d="M306 327 H349" class="wire" marker-end="url(#arrow)"/>
+
+  <rect x="354" y="250" width="330" height="166" rx="12" fill="#fff" stroke="#b9cee9"/>
+  <text x="372" y="280" class="heading">Media encoders</text>
+  <text x="372" y="311" class="body">Audio / image, as required</text>
+  <text x="372" y="340" class="body">Own queues → GPU forward</text>
+  <rect x="366" y="363" width="306" height="39" rx="7" fill="#fff4df"/>
+  <text x="380" y="388" class="tag">CPU: cached media features</text>
+  <path d="M684 327 H727" class="wire" marker-end="url(#arrow)"/>
+
+  <rect x="732" y="250" width="412" height="166" rx="12" fill="#eaf0ff" stroke="#8ba5d5"/>
+  <text x="752" y="280" class="heading">Thinker</text>
+  <text x="752" y="311" class="body">Wait for inputs → select a batch</text>
+  <text x="752" y="340" class="body">GPU prefill → token-by-token decode</text>
+  <rect x="744" y="363" width="388" height="39" rx="7" fill="#dce7ff"/>
+  <text x="758" y="388" class="tag">GPU: Thinker KV / prefix reuse</text>
+  <text x="752" y="439" class="small">Text is also returned through the API.</text>
+
+  <rect x="32" y="516" width="1136" height="225" rx="14" fill="#f3fbf8" stroke="#8fc8b8" stroke-width="1.5"/>
+  <text x="54" y="545" font-size="19" font-weight="700">Process: talker</text>
+  <text x="1010" y="545" class="tag">Same GPU 0</text>
+  <text x="56" y="596" font-size="22" font-weight="700" fill="#238575">Speech branch</text>
+  <text x="56" y="627" class="body">Only when requested.</text>
+  <text x="56" y="656" class="body">Its batches can differ</text>
+  <text x="56" y="681" class="body">from the Thinker's.</text>
+  <path d="M1144 327 H1155 V487 H575 V554" class="speech" marker-end="url(#green-arrow)"/>
+  <rect x="680" y="469" width="228" height="25" fill="#fff"/>
+  <text x="691" y="487" font-size="16" fill="#238575">Answer + internal features</text>
+
+  <rect x="430" y="559" width="292" height="161" rx="12" fill="#fff" stroke="#8fc8b8"/>
+  <text x="450" y="590" class="heading">Talker</text>
+  <text x="450" y="621" class="body">Own scheduler + batch</text>
+  <text x="450" y="649" class="body">GPU → speech codes</text>
+  <rect x="442" y="668" width="268" height="39" rx="7" fill="#dff3eb"/>
+  <text x="456" y="693" class="tag">GPU: separate Talker KV</text>
+  <path d="M722 632 H775" class="speech" marker-end="url(#green-arrow)"/>
+
+  <rect x="780" y="559" width="364" height="161" rx="12" fill="#fff" stroke="#8fc8b8"/>
+  <text x="800" y="590" class="heading">Code2Wav</text>
+  <text x="800" y="621" class="body">Own queue + local batching</text>
+  <text x="800" y="649" class="body">GPU Flow → HiFT → waveform</text>
+  <rect x="792" y="668" width="340" height="39" rx="7" fill="#dff3eb"/>
+  <text x="806" y="693" class="tag">GPU: reference-voice features</text>
+  <path d="M962 720 V765" class="speech" marker-end="url(#green-arrow)"/>
+  <rect x="780" y="770" width="364" height="45" rx="10" fill="#edf7f3"/>
+  <text x="962" y="799" text-anchor="middle" font-size="20" font-weight="600">Waveform → API → client</text>
+
+  <text x="32" y="781" class="small">One GPU holds both engines' weights, KV and workspaces.</text>
+  <text x="32" y="809" class="small">Text-only input skips media encoders. Placement is configurable.</text>
+  <text x="32" y="837" font-size="16" fill="#60708a">Dependencies shown; no timing scale or guaranteed overlap. Offline default, upstream 4d47186.</text>
+</svg>
