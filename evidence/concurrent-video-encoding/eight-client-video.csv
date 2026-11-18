@@ -1,0 +1,9 @@
+service_start,condition,attempts,completed,window_s,completed_requests_per_s,median_response_s,mean_encoder_queue_s,mean_output_audio_s
+diag01,ordinary,60,60,107.550199,0.557879,13.217567,6.091746,12.393333
+diag01,prepared frames,60,60,105.969269,0.566202,13.036902,5.028483,12.964
+diag01,exact visual features,60,60,73.937055,0.811501,8.542317,0.001717,12.939333
+diag01,ordinary repeat,60,60,107.990864,0.555603,13.274688,5.682691,12.773333
+diag02,ordinary,60,60,102.586189,0.584874,11.940377,4.738791,12.798667
+diag02,prepared frames,60,60,107.194156,0.559732,13.501006,5.177674,13.349333
+diag02,exact visual features,60,11,53.799405,,,,
+diag02b,ordinary,60,32,68.129302,,,,
