@@ -1,0 +1,3 @@
+series,pairs,all_required_correct,median_first_saved_ms,first_differences_ms,next_video_saved_ms,meets_preregistered_acceptance
+ACCEPT_AV_SMOKE,1,True,196.21461699999998,[196.21461699999998],[-36.511908000000005],False
+ACCEPT_AV_FULL_PORT,3,True,275.4193670000001,"[269.948857, 275.891572, 275.4193670000001]","[48.216706999999985, -8.66161900000003, 8.804012999999998]",True

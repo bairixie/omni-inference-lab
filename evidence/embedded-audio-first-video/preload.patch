@@ -1,0 +1,12 @@
+--- a/sglang_omni/models/minicpm_o/stages.py
++++ b/sglang_omni/models/minicpm_o/stages.py
+@@ -67,6 +67,9 @@
+     SimpleScheduler[StagePayload, StagePayload]
+     | ThreadedSimpleScheduler[StagePayload, StagePayload]
+ ):
++    import librosa
++
++    _ = librosa.load, librosa.to_mono, librosa.resample
+     if video_decode_threads is None:
+         video_decode_threads = automatic_video_decode_threads(max_concurrency)
+     else:
