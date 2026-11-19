@@ -1,0 +1,9 @@
+start,window,rate,layout,deadlines,intended,completed,literal_on_time,corrected_on_time,corrected_outputs,corrected_goodput_s,corrected_goodput_per_allocated_gpu_s,stable_backlog_and_drain,original_all_80,corrected_all_80,worst_corrected_class,worst_corrected_fraction
+DCQ01,audit16_round_robin_balanced3p5_61371,3.5,two complete replicas,loose,252,252,236,245,9,3.3906996893231147,1.6953498446615574,True,True,True,long,0.8947368421052632
+DCQ01,audit16_round_robin_balanced3p5_61371,3.5,two complete replicas,strict,252,252,187,195,9,2.698720160889826,1.349360080444913,True,False,False,long,0.5789473684210527
+DCQ01,audit16_round_robin_balanced5p5_61371,5.5,two complete replicas,loose,396,396,354,372,19,5.162428189798169,2.5812140948990847,True,True,True,media,0.9
+DCQ01,audit16_round_robin_balanced5p5_61371,5.5,two complete replicas,strict,396,396,231,238,19,3.3028438418601187,1.6514219209300594,True,False,False,speech,0.3669724770642202
+PCQ01,audit16_round_robin_balanced5p5_61371,5.5,one native split,loose,396,396,374,393,19,5.449543093394746,2.724771546697373,True,True,True,long,0.9310344827586207
+PCQ01,audit16_round_robin_balanced5p5_61371,5.5,one native split,strict,396,396,296,307,19,4.257022212906329,2.1285111064531645,True,False,False,media,0.55
+PCQ01R,audit16_round_robin_balanced3p5_61371,3.5,one native split,loose,252,252,237,246,9,3.399780764333074,1.699890382166537,True,True,True,long,0.9473684210526315
+PCQ01R,audit16_round_robin_balanced3p5_61371,3.5,one native split,strict,252,252,197,201,9,2.777869648906292,1.388934824453146,True,False,False,long,0.631578947368421
