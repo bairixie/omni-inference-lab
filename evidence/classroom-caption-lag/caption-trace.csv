@@ -1,0 +1,4 @@
+competing_questions,qa_context,caption_request_id,prompt_tokens,output_tokens,client_send_monotonic_s,thinker_enqueued_monotonic_s,first_batch_monotonic_s,client_stream_end_monotonic_s,before_queue_s,queue_s,after_first_dispatch_s,policy,first_batch_size
+0,latest,cl-cap-0002-00-r2d62913df38844bcb4ef49abd9f50037,327,21,237711.741450339,237711.806121111,237711.807525132,237713.393486346,0.064671,0.001404,1.585961,fcfs,1
+16,latest,cl-cap-0002-00-r3b6d93b824a147cabdddd9dcca936f94,327,21,237762.444600562,237762.655183767,237766.388754205,237767.887643257,0.210583,3.73357,1.498889,fcfs,7
+16,selected,cl-cap-0002-00-raa9768012662447ca5f1b70c40101120,327,21,237813.543032976,237813.775742719,237817.357952685,237818.956270469,0.23271,3.58221,1.598318,fcfs,6
