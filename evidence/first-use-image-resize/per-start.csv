@@ -1,0 +1,70 @@
+start,arm,compiler_storage,window,planned,completed,correct,timely,deadline_s,p50_s,p95_s,new_resize_binaries
+A15,source,campaign NFS,photo_catalog_natural,120,120,120,120,1.5,0.189868694,0.8900239504,50
+A15,source,campaign NFS,photo_heldout_first,24,24,24,16,1.5,1.16939773,2.1682902303000002,77
+A15,source,campaign NFS,photo_high_first,16,16,16,6,1.5,1.5938627555,2.0389403122500003,48
+A15,source,campaign NFS,photo_high_return,16,16,16,16,1.5,0.38472412600000006,0.49316364525,0
+A15,source,campaign NFS,photo_museum,96,96,96,96,1.5,0.31824089850000004,0.56184534425,92
+A15,source,campaign NFS,photo_primary_first,30,30,30,30,1.5,0.9824377770000001,1.41481682345,94
+A16,generic_resize,campaign NFS,photo_catalog_natural,120,120,120,120,1.5,0.18330119050000002,0.21181174275,0
+A16,generic_resize,campaign NFS,photo_heldout_first,24,24,24,24,1.5,0.191835111,0.2270812048,0
+A16,generic_resize,campaign NFS,photo_high_first,16,16,16,16,1.5,0.43383835400000004,0.7374094555,0
+A16,generic_resize,campaign NFS,photo_high_return,16,16,16,16,1.5,0.38168161650000004,0.47189748750000005,0
+A16,generic_resize,campaign NFS,photo_museum,96,96,96,96,1.5,0.167813202,0.20807778975000002,0
+A16,generic_resize,campaign NFS,photo_primary_first,30,30,30,30,1.5,0.188202415,0.21056384339999998,0
+A17,source,campaign NFS,photo_catalog_natural,120,120,120,120,1.5,0.1883277585,0.8744820818000001,50
+A17,source,campaign NFS,photo_heldout_first,24,24,24,17,1.5,1.250397353,1.77424320555,77
+A17,source,campaign NFS,photo_high_first,16,16,16,5,1.5,1.5420854445,1.94169613675,48
+A17,source,campaign NFS,photo_high_return,16,16,16,16,1.5,0.2943673465,0.49217232775,0
+A17,source,campaign NFS,photo_museum,96,96,96,96,1.5,0.325408961,0.54726606025,92
+A17,source,campaign NFS,photo_primary_first,30,30,30,25,1.5,1.0296412250000002,1.6410943732999999,94
+A20,source,node-local,photo_catalog_natural,120,120,120,120,1.5,0.18755039,0.6960483296000001,50
+A20,source,node-local,photo_heldout_first,24,24,24,24,1.5,0.6027105690000001,0.7145082027,77
+A20,source,node-local,photo_high_first,16,16,16,13,1.5,1.2439815220000001,1.7216258590000002,48
+A20,source,node-local,photo_high_return,16,16,16,16,1.5,0.32519599650000003,0.436245155,0
+A20,source,node-local,photo_museum,96,96,96,96,1.5,0.2545137605,0.400486416,92
+A20,source,node-local,photo_museum_holdout6,240,240,239,239,1.5,0.33340489650000005,0.5937406426999999,95
+A20,source,node-local,photo_primary_first,30,30,30,30,1.5,0.6179234925000001,0.8315366436499998,94
+A21,generic_resize,node-local,photo_catalog_natural,120,120,120,120,1.5,0.18342896050000002,0.21181897070000003,0
+A21,generic_resize,node-local,photo_heldout_first,24,24,24,24,1.5,0.191176175,0.22511599155,0
+A21,generic_resize,node-local,photo_high_first,16,16,16,16,1.5,0.27479786500000003,0.38589252975,0
+A21,generic_resize,node-local,photo_high_return,16,16,16,16,1.5,0.36516165700000003,0.45612576425000007,0
+A21,generic_resize,node-local,photo_museum,96,96,96,96,1.5,0.16708510000000001,0.206490225,0
+A21,generic_resize,node-local,photo_museum_holdout6,240,240,239,239,1.5,0.26908650100000003,0.39076448015,0
+A21,generic_resize,node-local,photo_primary_first,30,30,30,30,1.5,0.1861249855,0.21490528329999997,0
+B09,observed_split,campaign NFS,photo_catalog_natural,120,120,120,118,1.5,0.222399448,0.9001862216500001,50
+B09,observed_split,campaign NFS,photo_heldout_first,24,24,24,11,1.5,1.521435936,2.0607722586,77
+B09,observed_split,campaign NFS,photo_high_first,16,16,16,4,1.5,2.0298461740000002,2.537622025,48
+B09,observed_split,campaign NFS,photo_high_return,16,16,16,16,1.5,0.48430074450000005,0.59782388325,0
+B09,observed_split,campaign NFS,photo_primary_first,30,30,30,22,1.5,1.2980309325000001,1.8644803664499998,90
+B19,generic_resize,campaign NFS,photo_catalog_natural,120,120,120,120,1.5,0.18298200550000002,0.21198297595,0
+B19,generic_resize,campaign NFS,photo_heldout_first,24,24,24,24,1.5,0.19022646450000003,0.22238573005,0
+B19,generic_resize,campaign NFS,photo_high_first,16,16,16,16,1.5,0.36197225350000006,0.4785689245,0
+B19,generic_resize,campaign NFS,photo_high_return,16,16,16,16,1.5,0.3364484,0.458582213,0
+B19,generic_resize,campaign NFS,photo_museum,96,96,96,96,1.5,0.1705303115,0.20518087425,0
+B19,generic_resize,campaign NFS,photo_primary_first,30,30,30,30,1.5,0.18783773850000002,0.20765209404999996,0
+B20,source,campaign NFS,photo_catalog_natural,120,120,120,120,1.5,0.1874354235,1.02620610775,50
+B20,source,campaign NFS,photo_heldout_first,24,24,24,24,1.5,0.94202425,1.04515600885,77
+B20,source,campaign NFS,photo_high_first,16,16,16,9,1.5,1.4776449375,1.8233441025000001,48
+B20,source,campaign NFS,photo_high_return,16,16,16,16,1.5,0.3744415595,0.47164669575000007,0
+B20,source,campaign NFS,photo_museum,96,96,96,96,1.5,0.351654352,0.8304297805,92
+B20,source,campaign NFS,photo_primary_first,30,30,30,20,1.5,1.247887138,2.5936039560999995,94
+B21,generic_resize,campaign NFS,photo_catalog_natural,120,120,120,120,1.5,0.182701084,0.21026245840000002,0
+B21,generic_resize,campaign NFS,photo_heldout_first,24,24,24,24,1.5,0.1889065625,0.2210999057,0
+B21,generic_resize,campaign NFS,photo_high_first,16,16,16,16,1.5,0.362772565,0.43058875425000004,0
+B21,generic_resize,campaign NFS,photo_high_return,16,16,16,16,1.5,0.32954471250000006,0.43013174875000004,0
+B21,generic_resize,campaign NFS,photo_museum,96,96,96,96,1.5,0.1778289285,0.205905885,0
+B21,generic_resize,campaign NFS,photo_primary_first,30,30,30,30,1.5,0.18746646900000002,0.20899135079999998,0
+B24,generic_resize,node-local,photo_catalog_natural,120,120,120,120,1.5,0.182614128,0.21116880545,0
+B24,generic_resize,node-local,photo_heldout_first,24,24,24,24,1.5,0.190494774,0.2216166589,0
+B24,generic_resize,node-local,photo_high_first,16,16,16,16,1.5,0.3961228565,0.49179175150000004,0
+B24,generic_resize,node-local,photo_high_return,16,16,16,16,1.5,0.3812022105,0.44695543825,0
+B24,generic_resize,node-local,photo_museum,96,96,96,96,1.5,0.16976068,0.20513801375000001,0
+B24,generic_resize,node-local,photo_museum_holdout6,240,240,239,239,1.5,0.273151521,0.38880467155,0
+B24,generic_resize,node-local,photo_primary_first,30,30,30,30,1.5,0.18806369850000001,0.20599370704999997,0
+B25,source,node-local,photo_catalog_natural,120,120,120,120,1.5,0.1855966395,0.69755150185,50
+B25,source,node-local,photo_heldout_first,24,24,24,24,1.5,0.646258175,0.8119889951,77
+B25,source,node-local,photo_high_first,16,16,16,11,1.5,1.34468114,1.7146269735000002,48
+B25,source,node-local,photo_high_return,16,16,16,16,1.5,0.367947721,0.484265908,0
+B25,source,node-local,photo_museum,96,96,96,96,1.5,0.2532101845,0.41492564925000003,92
+B25,source,node-local,photo_museum_holdout6,240,240,239,239,1.5,0.334824463,0.5984424133499999,95
+B25,source,node-local,photo_primary_first,30,30,30,30,1.5,0.6090427540000001,0.77433246055,94

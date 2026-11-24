@@ -1,0 +1,27 @@
+--- a/sglang_omni/models/minicpm_o/components/image_processing.py
++++ b/sglang_omni/models/minicpm_o/components/image_processing.py
+@@ -53,16 +53,19 @@
+     tgt_sizes: list[torch.Tensor]
+ 
+ 
+-@triton.jit
++@triton.jit(
++    do_not_specialize=["input_width", "input_height", "output_width", "output_height"],
++    do_not_specialize_on_alignment=["input_width", "input_height", "output_width", "output_height"],
++)
+ def resize_pass(
+     pixels: tl.tensor,
+     coefficients: tl.tensor,
+     starts: tl.tensor,
+     output: tl.tensor,
+-    input_width: tl.constexpr,
+-    input_height: tl.constexpr,
+-    output_width: tl.constexpr,
+-    output_height: tl.constexpr,
++    input_width,
++    input_height,
++    output_width,
++    output_height,
+     taps: tl.constexpr,
+     horizontal: tl.constexpr,
+     block_size: tl.constexpr,
