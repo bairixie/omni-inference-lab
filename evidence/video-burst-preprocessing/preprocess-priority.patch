@@ -1,0 +1,58 @@
+--- a/sglang_omni/models/minicpm_o/stages.py
++++ b/sglang_omni/models/minicpm_o/stages.py
+@@ -100,9 +100,54 @@
+     if max_concurrency == 1:
+         return SimpleScheduler(preprocess_with_events)
+     else:
+-        return ThreadedSimpleScheduler(
++        scheduler = ThreadedSimpleScheduler(
+             preprocess_with_events, max_concurrency=max_concurrency
+         )
++        from sglang_omni.scheduling.threaded_simple_scheduler import CountingInbox
++        from itertools import islice
++
++        class ShortChatInbox(CountingInbox):
++            promotions = 0
++
++            @staticmethod
++            def brief(item):
++                if item.type != "new_request":
++                    return False
++                payload = item.data
++                if (payload.request.metadata or {}).get("task") in ("tts", "transcription"):
++                    return False
++                inp = payload.request.inputs
++                if isinstance(inp, dict):
++                    if any(inp.get(key) for key in ("images", "audios", "audio", "videos", "video", "audio_bytes")):
++                        return False
++                    inp = inp.get("messages")
++                if not isinstance(inp, list) or len(inp) != 1:
++                    return False
++                message = inp[0]
++                if not isinstance(message, dict) or message.get("role") != "user":
++                    return False
++                content = message.get("content")
++                return isinstance(content, str) and len(content) <= 512
++
++            def _get(self):
++                # Queue.get holds the same mutex as the upstream claim bookkeeping.
++                # Retain FIFO within each class. After two overtakes serve the oldest.
++                if self.queue and self.queue[0].type == "new_request" and self.promotions < 2 and not self.brief(self.queue[0]):
++                    for pos, item in enumerate(islice(self.queue, 1, 12), 1):
++                        if item.type != "new_request":
++                            break
++                        if self.brief(item):
++                            del self.queue[pos]
++                            self.queue.appendleft(item)
++                            self.promotions += 1
++                            emit_event(request_id=item.request_id, stage="preprocessing",
++                                       event_name="study_short_promotion", metadata={"skipped": pos})
++                            return super()._get()
++                self.promotions = 0
++                return super()._get()
++
++        scheduler.inbox = ShortChatInbox()
++        return scheduler
+ 
+ 
+ ENCODER_CACHE_MAX_ENTRIES = 64
