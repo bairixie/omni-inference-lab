@@ -1,0 +1,7 @@
+start,card,active_slots,graph_max,short_requests,correct_short,correct_short_by_2s,median_short_ms,joined_short_queue_events,median_short_queue_ms,median_short_host_service_ms,long_requests,long_length_stops,median_long_ms,max_observed_batch,max_waiting,min_observed_free_kv_slots
+A13,A,8,8,36,36,0,4991.31,0,,,36,36,5128.72,8,20,16428
+A15,A,16,16,36,36,36,244.78,0,,,36,36,4234.51,16,8,17944
+A16,A,8,16,36,36,0,5014.29,0,,,36,36,5144.13,8,20,11294
+B13,B,8,8,36,36,0,4990.72,36,4855.71,31.47,36,36,5124.36,8,20,11557
+B14,B,8,16,36,36,0,4988.87,36,4884.4,31.47,36,36,5127.03,8,20,11898
+B15,B,16,16,36,36,36,246.92,36,114.31,33.62,36,36,4227.76,16,8,17736
