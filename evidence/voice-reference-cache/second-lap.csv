@@ -1,0 +1,17 @@
+start,card,reference_set,cache_capacity,working_set,lap,requests,successful_wavs,observed_lookups,hits,median_request_ms
+A04,A,"same PCM, changed headers (screen)",32,32,2,32,32,0,,333.27
+A04,A,"same PCM, changed headers (screen)",32,33,2,33,33,0,,440.42
+B03,B,"same PCM, changed headers (holdout)",32,32,2,32,32,32,32,339.55
+B03,B,"same PCM, changed headers (holdout)",32,33,2,33,33,33,0,407.0
+B03,B,distinct audio,32,32,2,32,32,32,32,334.61
+B03,B,distinct audio,32,33,2,33,33,33,0,407.1
+B06,B,"same PCM, changed headers (holdout)",64,32,2,32,32,32,32,344.81
+B06,B,"same PCM, changed headers (holdout)",64,33,2,33,33,33,33,322.43
+B06,B,distinct audio,64,32,2,32,32,32,32,335.0
+B06,B,distinct audio,64,33,2,33,33,33,33,325.63
+B07,B,"same PCM, changed headers (holdout)",32,32,2,32,32,32,32,339.57
+B07,B,"same PCM, changed headers (holdout)",32,33,2,33,33,33,0,404.51
+B10,B,"same PCM, changed headers (holdout)",32,32,2,32,32,0,,336.7
+B10,B,"same PCM, changed headers (holdout)",32,33,2,33,33,0,,412.74
+B10,B,distinct audio,32,32,2,32,32,0,,338.42
+B10,B,distinct audio,32,33,2,33,33,0,,421.11
