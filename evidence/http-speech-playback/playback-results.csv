@@ -1,0 +1,25 @@
+start,task,link_kbit_s,delivery,model_outputs,asr_contains_answer,correct_timely_continuous,median_first_playable_sec,median_total_shortage_ms,median_wire_bytes
+B47,gallery QA,4096,intact,8,5,4,0.7274,0.0,186760.0
+B47,gallery QA,4096,events200,8,5,5,0.3996,0.0,191516.0
+B47,gallery QA,768,intact,8,5,2,2.3012,0.0,186760.0
+B47,gallery QA,768,events200,8,5,5,0.5106,0.0,191516.0
+B47,gallery QA,256,intact,8,5,0,6.1756,0.0,186760.0
+B47,gallery QA,256,events200,8,5,0,0.7842,2803.63,191516.0
+A47,gallery QA,4096,intact,8,3,3,0.7687,0.0,204911.5
+A47,gallery QA,4096,events200,8,3,3,0.3921,0.0,210179.0
+A47,gallery QA,768,intact,8,3,2,2.4815,0.0,204911.5
+A47,gallery QA,768,events200,8,3,3,0.491,0.0,210179.0
+A47,gallery QA,256,intact,8,3,0,6.7325,0.0,204911.5
+A47,gallery QA,256,events200,8,3,0,0.768,3075.68,210179.0
+B51,recorded QA,4096,intact,16,14,10,1.2492,0.0,184701.0
+B51,recorded QA,4096,events200,16,14,12,0.9182,0.0,189313.5
+B51,recorded QA,768,intact,16,14,1,2.9171,0.0,184701.0
+B51,recorded QA,768,events200,16,14,12,1.0251,0.0,189313.5
+B51,recorded QA,256,intact,16,14,0,6.8699,0.0,184701.0
+B51,recorded QA,256,events200,16,14,0,1.2999,2739.09,189313.5
+A50,recorded QA,4096,intact,16,14,13,1.3346,0.0,210985.0
+A50,recorded QA,4096,events200,16,14,14,0.9045,0.0,216455.0
+A50,recorded QA,768,intact,16,14,1,3.0543,0.0,210985.0
+A50,recorded QA,768,events200,16,14,14,1.0156,0.0,216455.0
+A50,recorded QA,256,intact,16,14,0,7.2164,0.0,210985.0
+A50,recorded QA,256,events200,16,14,0,1.2899,3160.66,216455.0
